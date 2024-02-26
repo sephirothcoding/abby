@@ -1,381 +1,119 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>xatspace n</title>
-  <style> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagina Exemplu</title>
+  <style>
+    /* Resetare stiluri implicite */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    /* Stilizare meniu orizontal */
+    nav {
+      background-color: #333;
+    }
 
+    nav ul {
+      list-style-type: none;
+      text-align: center;
+    }
 
-* {
-  margin: 0;
-  padding: 0;
-}
+    nav ul li {
+      display: inline;
+    }
 
-html,
-body {
-  height: 100%;
-  /* for touch screen */
-  touch-action: none; 
-}
+    nav ul li a {
+      display: inline-block;
+      padding: 10px 20px;
+      color: #fff;
+      text-decoration: none;
+    }
 
-body {
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #111111;
-  background-image: url("https://xatimg.com/image/McN58wrXDt7Z.gif");
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-}
+    nav ul li a:hover {
+      background-color: #555;
+    }
 
-#drag-container, #spin-container {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: auto;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transform: rotateX(-10deg);
-          transform: rotateX(-10deg);
-}
+    /* Stilizare titlu de pagină */
+    h1 {
+      text-align: center;
+      margin: 20px 0;
+    }
 
-#drag-container img, #drag-container video {
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  line-height: 200px;
-  font-size: 50px;
-  text-align: center;
-  -webkit-box-shadow: 0 0 8px #fff;
-          box-shadow: 0 0 8px #fff;
-  -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
-}
+    /* Stilizare galerie de imagini (carusel) */
+    .gallery {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-x: auto;
+      white-space: nowrap;
+      margin-bottom: 20px;
+    }
 
-#drag-container img:hover, #drag-container video:hover {
-  -webkit-box-shadow: 0 0 15px #fffd;
-          box-shadow: 0 0 15px #fffd;
-  -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0007);
-}
+    .gallery img {
+      max-width: 100%;
+      height: auto;
+      margin-right: 10px;
+    }
 
-#drag-container p {
-  font-family: Serif;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  -webkit-transform: translate(-50%,-50%) rotateX(90deg);
-          transform: translate(-50%,-50%) rotateX(90deg);
-  color: #fff;
-}
+    /* Stilizare tabel */
+    table {
+      width: 80%;
+      margin: 0 auto;
+      border-collapse: collapse;
+    }
 
-#ground {
-  width: 900px;
-  height: 900px;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  -webkit-transform: translate(-50%,-50%) rotateX(90deg);
-          transform: translate(-50%,-50%) rotateX(90deg);
-  background: -webkit-radial-gradient(center center, farthest-side , #9993, transparent);
-}
-
-#music-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-#fly-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-#name-container {
-  position: absolute;
-  top: 0;
-  margin: auto;
-  width: 50%;
-  padding: 10px;
-}
-
-@-webkit-keyframes spin {
-  from{
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-  } to{
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
-  }
-}
-
-@keyframes spin {
-  from{
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-  } to{
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
-  }
-}
-@-webkit-keyframes spinRevert {
-  from{
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
-  } to{
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-  }
-}
-@keyframes spinRevert {
-  from{
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
-  } to{
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-  }
-}
-
-@import url(https://fonts.googleapis.com/css?family=Mr+Dafoe);
-@import url(https://fonts.googleapis.com/css?family=Titillium+Web:900);
-@import url(https://fonts.googleapis.com/css?family=Righteous);
-@import url(https://fonts.googleapis.com/css?family=Candal);
-
-@import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
-
-@import url(https://fonts.googleapis.com/css?family=Monoton);
-
-
-h1{
-
-position: relative;
-
-left: 50%;
-  
-}
-
-
-
-
-
-.vectro {
-  position: relative;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 0.1px #f1f1f1;
-  font-family: 'Righteous', cursive;
-  font-size: 80px;
-  text-align: center; 
-  margin: 50px 0 50px 0;
-}
-
-.vectro:after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  /*-webkit-animation:vectro_effect 0.067s infinite;*/
-  background: repeating-linear-gradient(0deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, rgba(255,255,255,0) 1px, rgba(255,255,255,0) 2px);
-}
-
-
-
-.windows .vectro {
-  -webkit-text-stroke: 4px #f1f1f1;
-}
-
-.vectro-body {
-  -webkit-background-clip: text;
-  background-image: -webkit-linear-gradient(#C3BFB4 0%, #FDFCFA 50%, #E8E7E5 51%, #757172 52%, #E8E9DB 100%);
-  -webkit-filter: drop-shadow(2px 2px 15px #3F59F4);
-}
-
-.vectro-red {
-  color: #F10C20;
-  -webkit-text-fill-color: #F10C20;
-  -webkit-text-stroke: 0;
-  -webkit-filter: drop-shadow(2px 2px 15px #F10C20);
-  font-style: italic;
-  padding-right: 20px;
-}
-
-.windows .vectro-red {
-  padding-right: 30px;
-}
-
-.vectro-green {
-  color: #6BFF2B;
-  -webkit-text-fill-color: #6BFF2B;
-  -webkit-filter: drop-shadow(2px 2px 15px #6BFF2B);
-  -webkit-text-stroke: 0;
-  font-style: italic;
-  padding-right: 20px;
-  margin-left: -20px;
-}
-
-.windows .vectro-green {
-  padding-right: 30px;
-  margin-left: -30px;
-}
-
-.vectro-blue {
-  color: #3F59F4;
-  -webkit-text-fill-color: #3F59F4;
-  -webkit-filter: drop-shadow(2px 2px 15px #3F59F4);
-  -webkit-text-stroke: 0;
-  font-style: italic;
-  padding-right: 20px;
-  margin-left: -20px;
-}
-
-.windows .vectro-blue {
-  padding-right: 30px;
-  margin-left: -30px;
-}
-
-
-
-
-
-
-@-webkit-keyframes chrome_effect {
-  0% {background-position:-680px 0;}
-  10% {background-position:420px 0;}
-  100% {background-position:420px 0;}
-}
-
-@-webkit-keyframes cop_before_effect {
-  0% {
-    left: 51px;
-    top: 74px;
-    opacity: 0;}
-  
-  15% {
-    left: 51px;
-    top: 74px;
-    opacity: 1;}
-  
-  30% {
-    left: 51px;
-    top: 74px;
-    opacity: 0;}
-  
-  35% {
-    left: 370px;
-    top: 45px;
-    opacity: 0;}
-   
-  50% {
-    left: 370px;
-    top: 45px;
-    opacity: 1;}
-  
-  65% {
-    left: 370px;
-    top: 45px;
-    opacity: 0;}
-  
-  70% {
-    left: 564px;
-    top: 74px;
-    opacity: 0;}
-   
-  85% {
-    left: 564px;
-    top: 74px;
-    opacity: 1;}
-  
-  100% {
-    left: 564px;
-    top: 74px;
-    opacity: 0;}
-}
-
-@-webkit-keyframes cop_after_effect {
-  0% {
-    left: 90px;
-    top: 32px;
-    opacity: 0;}
-  
-  15% {
-    left: 90px;
-    top: 32px;
-    opacity: 1;}
-  
-  30% {
-    left: 90px;
-    top: 32px;
-    opacity: 0;}
-  
-  35% {
-    left: 413px;
-    top: 11px;
-    opacity: 0;}
-   
-  50% {
-    left: 413px;
-    top: 11px;
-    opacity: 1;}
-  
-  65% {
-    left: 413px;
-    top: 11px;
-    opacity: 0;}
-  
-  70% {
-    left: 603px;
-    top: 32px;
-    opacity: 0;}
-   
-  85% {
-    left: 603px;
-    top: 32px;
-    opacity: 1;}
-  
-  100% {
-    left: 603px;
-    top: 32px;
-    opacity: 0;}
-}
-
+    table th, table td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
   </style>
-
 </head>
 <body>
-  
-<div id="name-container">
-   <link rel="stylesheet" href="./styles.css"> 
- <p>
-    <h1 class="vectro"><span class="vectro-body">Abby</span> 
-      </p>
+  <audio id="bg-music" autoplay loop>
+    <source src="melodie.mp3" type="audio/mpeg">
+    <!-- Adăugați alte surse audio aici pentru compatibilitatea cu browserele diferite -->
+  </audio>
+  <nav>
+    <ul>
+      <li><a href="#">Acasă</a></li>
+      <li><a href="#">Despre</a></li>
+      <li><a href="#">Galerie</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <h1>Numele Paginii</h1>
+  <div class="gallery">
+    <img src="image1.jpg" alt="Imagine 1">
+    <img src="image2.jpg" alt="Imagine 2">
+    <img src="image3.jpg" alt="Imagine 3">
+    <!-- Adăugați mai multe imagini aici -->
   </div>
-
-
-    
-<div id="drag-container">
-  <div id="spin-container">
-    <!-- Add your images (or video) here -->
-    <img src="https://xatimg.com/image/4VGahpJGcVTU.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="1">
-    <img src="https://xatimg.com/image/GHrgnVXMZKi9.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="2">
-    <img src="https://xatimg.com/image/1RXMf2xVP1Q2.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="3">
-    <img src="https://xatimg.com/image/o8G6Bxo4wI4R.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="4">
-    <img src="https://xatimg.com/image/xXCiOAJifWsS.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="5">
-    <img src="https://xatimg.com/image/vVZNTR10UGQm.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="6">
-    <img src="https://xatimg.com/image/7I0kqjDUcWWc.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="7">
-    
-</div>
-</div>
-
-  
-
+  <table>
+    <thead>
+      <tr>
+        <th>Coloana 1</th>
+        <th>Coloana 2</th>
+        <th>Coloana 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Date 1</td>
+        <td>Date 2</td>
+        <td>Date 3</td>
+      </tr>
+      <tr>
+        <td>Date 4</td>
+        <td>Date 5</td>
+        <td>Date 6</td>
+      </tr>
+      <!-- Adăugați mai multe rânduri aici -->
+    </tbody>
+  </table>
 </body>
 </html>
