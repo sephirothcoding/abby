@@ -1,21 +1,39 @@
-The MIT License (MIT)
+Copyright (c) 2024 by Seph (70007000) 
 
-Copyright (c) 2022 by Van (https://codepen.io/vanbui/pen/vYRxoBE)
+Conditii de utilizare:
+poti edita codul, pe raspunderea ta
+nu poti vinde sau da codul nimanui fara permisiunea creatorului original Seph (70007000)
+nu poti sterge creditele ( numele si mesajul de copyright din josul paginii) 
+daca vezi codul la altcineva, ai responsabilitatea de a anunta pe Seph (70007000) pentru a face raport conform regulilor 
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+
+Copyright (c) 2024 by Seph (70007000)
+
+Usage conditions:
+you can edit the code, at your own risk
+you may not sell or give the code to anyone without the permission of the original creator Seph (70007000)
+you cannot delete credits (name and copyright message at the bottom of the page)
+if you see the code on someone else, you have the responsibility to notify Seph (70007000) to report according to the rules
+
+
+
+Copyright (c) 2024 por Seph (70007000)
+
+Condiciones de uso:
+Puedes editar el código, bajo tu propia responsabilidad.
+no puedes vender ni dar el código a nadie sin el permiso del creador original Seph (70007000)
+no puedes eliminar créditos (nombre y mensaje de copyright al final de la página)
+Si ves el código en otra persona, tienes la responsabilidad de notificar a Seph (70007000) para que informe de acuerdo con las reglas.
+
+
+Copyright (c) 2024 por Seph (70007000)
+
+Condições de uso:
+você pode editar o código, por sua conta e risco
+você não pode vender ou dar o código a ninguém sem a permissão do criador original Seph (70007000)
+você não pode excluir créditos (nome e mensagem de copyright no final da página)
+se você vir o código em outra pessoa, você tem a responsabilidade de notificar Seph (70007000) para denunciar de acordo com as regras
+
+
